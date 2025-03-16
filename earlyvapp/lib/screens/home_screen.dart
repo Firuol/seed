@@ -187,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             iconPath: 'assets/location.png',
                                             label: 'Locate My herd',
                                             backgroundColor:
-                                                Color.fromARGB(255, 12, 83, 17),
+                                               Color(0xFF14AF1B),
                                           ),
                                         ),
                                         GestureDetector(
@@ -199,7 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             iconPath: 'assets/herd.png',
                                             label: 'Herd Health',
                                             backgroundColor:
-                                                Color.fromARGB(255, 12, 83, 17),
+                                                Color(0xFF14AF1B),
                                           ),
                                         ),
                                         GestureDetector(
@@ -211,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             iconPath: 'assets/vaccine.png',
                                             label: 'Medication',
                                             backgroundColor:
-                                                Color.fromARGB(255, 12, 83, 17),
+                                                Color(0xFF14AF1B),
                                           ),
                                         ),
                                         GestureDetector(
@@ -223,7 +223,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             iconPath: 'assets/phone.png',
                                             label: 'Telemedicine',
                                             backgroundColor:
-                                                Color.fromARGB(255, 12, 83, 17),
+                                                Color(0xFF14AF1B),
                                           ),
                                         ),
                                       ],
