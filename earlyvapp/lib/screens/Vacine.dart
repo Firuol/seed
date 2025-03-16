@@ -4,24 +4,24 @@ class vacine extends StatelessWidget {
   // Static vaccination schedule data
   final List<Map<String, String>> vaccinationSchedules = [
     {
-      'Buufata': 'Waajira Qonnaa Magaala jimmaa',
-      'Guyyaa': '2017-05-10',
-      'Teessoo': 'Jimma, Ethiopia',
+      'Station': 'Waajira Qonnaa Magaala jimmaa',
+      'Date': '2017-05-10',
+      'Location': 'Jimma, Ethiopia',
     },
     {
-      'Buufata': 'Kilinika Qarsaa',
-      'Guyyaa': '2017-06-15',
-      'Teessoo': 'Kersa, Ethiopia',
+      'Station': 'Kilinika Qarsaa',
+      'Date': '2017-06-15',
+      'Location': 'Kersa, Ethiopia',
     },
     {
-      'Buufata': 'Waajira Qonnaa Agaaroo',
-      'Guyyaa': '2017-07-20',
-      'Teessoo': 'Agaro, Ethiopia',
+      'Station': 'Waajira Qonnaa Agaaroo',
+      'Date': '2017-07-20',
+      'Location': 'Agaro, Ethiopia',
     },
     {
-      'Buufata': 'Qoranno Qonna Sokoru',
-      'Guyyaa': '2017-07-25',
-      'Teessoo': 'Sokoru, Ethiopia',
+      'Station': 'Qoranno Qonna Sokoru',
+      'Date': '2017-07-25',
+      'Location': 'Sokoru, Ethiopia',
     },
   ];
 
@@ -30,7 +30,7 @@ class vacine extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Sagantaa Dabaree Talaalli ',
+          'Vaccination Schedule',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: const Color.fromARGB(255, 12, 83, 17),
@@ -48,11 +48,11 @@ class vacine extends StatelessWidget {
                 color: Color.fromARGB(255, 12, 83, 17),
               ),
               title: Text(
-                schedule['Buufata']!,
+                schedule['Station']!,
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
               subtitle: Text(
-                  'Guyyaa: ${schedule['Guyyaa']}\nTeessoo: ${schedule['Teessoo']}'),
+                  'Date: ${schedule['Date']}\nLocation: ${schedule['Location']}'),
               trailing: IconButton(
                 icon: const Icon(
                   Icons.location_on,

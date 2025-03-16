@@ -31,8 +31,8 @@ class _ToggleTabsState extends State<ToggleTabs> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _buildTab('Horii', 0),
-          _buildTab('Haaraa Galmeessuf', 1),
+          _buildTab('Main', 0),
+          _buildTab('New', 1),
         ],
       ),
     );

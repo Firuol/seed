@@ -32,7 +32,7 @@ class AnimalListScreen extends StatelessWidget {
                         ),
                         SizedBox(width: 10),
                         Text(
-                          "Fayyaa Hori",
+                          "Herd health",
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -40,7 +40,7 @@ class AnimalListScreen extends StatelessWidget {
                         ),
                         Spacer(),
                         Text(
-                          "Maqaa: eshetu",
+                          "FarmID: #456pqr",
                           style: TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.bold,
@@ -54,17 +54,17 @@ class AnimalListScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Maaqa adda",
+                          "Animal ID",
                           style: TextStyle(
                               fontSize: 15, fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          "Gosa",
+                          "Type",
                           style: TextStyle(
                               fontSize: 15, fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          "Haala",
+                          "Status",
                           style: TextStyle(
                               fontSize: 15, fontWeight: FontWeight.bold),
                         ),
@@ -86,8 +86,8 @@ class AnimalListScreen extends StatelessWidget {
                               Navigator.pushNamed(context, "/healthDetails")
                             },
                             child: AnimalListItem(
-                              animalID: 'Hori-${6789 + index}',
-                              animalType: index % 2 == 0 ? 'Sawwaa' : 'Qotiyyo',
+                              animalID: 'An-${6789 + index}',
+                              animalType: index % 2 == 0 ? 'Cow' : 'Ox',
                               indicatorColor: index % 3 == 0
                                   ? Color(0xFF4DE342)
                                   : index % 3 == 1

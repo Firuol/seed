@@ -19,7 +19,7 @@ class Telemed extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Doctara Marisisuu',
+          'Telemedicine',
           style: TextStyle(
             color: Colors.white, // Makes the text color white
           ),

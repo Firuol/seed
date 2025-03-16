@@ -35,7 +35,7 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
     atRiskPercent = widget.atRiskCount / total;
     criticalPercent = widget.criticalCount / total;
 
-    displayLabel = 'Horii fayyaa';
+    displayLabel = 'Healthy Herd';
     displayCount = widget.healthyCount;
     displayColor = Color(0xFF4DE342);
     displayPercent = healthyPercent;
@@ -51,8 +51,8 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
             CircularPercentIndicator(
               radius: 70.0,
               lineWidth: 10.0,
-              percent: displayLabel == 'Fayyalessa' ? displayPercent : 0.0,
-              progressColor: displayLabel == 'Fayyalessa'
+              percent: displayLabel == 'Healthy Herd' ? displayPercent : 0.0,
+              progressColor: displayLabel == 'Healthy Herd'
                   ? displayColor
                   : Colors.transparent,
               backgroundColor: Colors.transparent,
@@ -61,8 +61,8 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
             CircularPercentIndicator(
               radius: 70.0,
               lineWidth: 10.0,
-              percent: displayLabel == 'Dhukkubsata' ? displayPercent : 0.0,
-              progressColor: displayLabel == 'Dhukkubsata'
+              percent: displayLabel == 'At Risk' ? displayPercent : 0.0,
+              progressColor: displayLabel == 'At Risk'
                   ? displayColor
                   : Colors.transparent,
               backgroundColor: Colors.transparent,
@@ -71,8 +71,8 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
             CircularPercentIndicator(
               radius: 70.0,
               lineWidth: 10.0,
-              percent: displayLabel == 'B/Dhukkubsata' ? displayPercent : 0.0,
-              progressColor: displayLabel == 'B/Dhukkubsata'
+              percent: displayLabel == 'Critical' ? displayPercent : 0.0,
+              progressColor: displayLabel == 'Critical'
                   ? displayColor
                   : Colors.transparent,
               backgroundColor: Colors.transparent,
@@ -95,15 +95,15 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildLegend(Color(0xFF4DE342), 'Fayyalessa', widget.healthyCount,
-                'Fayyalessa', Color(0xFF4DE342), healthyPercent),
-            _buildLegend(Color(0xFFFF813D), 'Dhukkubsata', widget.atRiskCount,
-                'Dhukkubsata', Color(0xFFFF813D), atRiskPercent),
+            _buildLegend(Color(0xFF4DE342), 'Healthy Herd', widget.healthyCount,
+                'Healthy Herd', Color(0xFF4DE342), healthyPercent),
+            _buildLegend(Color(0xFFFF813D), 'At Risk', widget.atRiskCount,
+                'At Risk', Color(0xFFFF813D), atRiskPercent),
             _buildLegend(
                 Color(0xFFF20000),
-                'B/Dhukkubsata',
+                'Critical',
                 widget.criticalCount,
-                'B/Dhukkubsata',
+                'Critical',
                 Color(0xFFF20000),
                 criticalPercent),
           ],

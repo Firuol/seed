@@ -9,7 +9,7 @@ class PotentialDiseasesWidget extends StatefulWidget {
 
 class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
   double diseaseProbability = 0.7;
-  String diseaseName = "Gandii";
+  String diseaseName = "Foot and Mouth Disease";
   Color diseaseColor = Color(0xFFFF813D);
 
   void updateIndicator(
@@ -35,7 +35,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            "Tilmaama Dhibee",
+            "Potential Diseases",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
@@ -82,7 +82,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                     onTap: () {
                       updateIndicator(
                         0.7,
-                        "Gandii",
+                        "Foot and Mouth Disease",
                       );
                     },
                     child: Container(
@@ -116,7 +116,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                                     ),
                                   ),
                                   Text(
-                                    "Gandii",
+                                    "Foot and Mouth Disease",
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
@@ -131,7 +131,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                           ),
                           SizedBox(height: 5),
                           Text(
-                            "Hoaa qaamaa olaanaa fi dha'ana onnee yeroo yeroon jijiramu",
+                            "Highly contagious viral disease affecting cloven-hoofed animals.",
                             style: TextStyle(
                               fontSize: 10,
                               color: Colors.grey[700],
@@ -146,7 +146,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                     onTap: () {
                       updateIndicator(
                         0.3,
-                        "Abbaa Sangaa",
+                        "Lumpy Skin Disease",
                       );
                     },
                     child: Container(
@@ -180,7 +180,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                                     ),
                                   ),
                                   Text(
-                                    "Hooksisaa",
+                                    "Lumpy Skin Disease",
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
@@ -195,7 +195,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                           ),
                           SizedBox(height: 5),
                           Text(
-                            "yeroo bay'ee jabbiile xixiqo irratti kan mul'atu.",
+                            "A disease affecting cattle, characterized by lumps on the skin.",
                             style: TextStyle(
                               fontSize: 10,
                               color: Colors.grey[700],

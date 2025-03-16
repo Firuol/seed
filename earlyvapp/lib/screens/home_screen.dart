@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Baga Nagaan dhuftee Eshetu!",
+                              "Welcome Back Eshetu!",
                               style: TextStyle(
                                   color: Color.fromARGB(255, 12, 83, 17),
                                   fontSize: 20),
@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'Hori Galmeesu',
+                                            'Register Animal',
                                             style: TextStyle(
                                                 fontSize: 15,
                                                 fontWeight: FontWeight.bold),
@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           SizedBox(height: 10),
                                           DropdownButtonFormField<String>(
                                             decoration: InputDecoration(
-                                              labelText: 'Gosa Hori',
+                                              labelText: 'Animal Type',
                                               labelStyle:
                                                   TextStyle(color: Colors.grey),
                                               filled: true,
@@ -105,9 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               ),
                                             ),
                                             items: [
-                                              'Sawwaa',
-                                              'Qotiyyo',
-                                              'Jabbii'
+                                              'Cow', 'Ox', 'Calf'
                                             ].map((String value) {
                                               return DropdownMenuItem<String>(
                                                 value: value,
@@ -121,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           SizedBox(height: 20),
                                           TextFormField(
                                             decoration: InputDecoration(
-                                              labelText: 'Gosa',
+                                              labelText: 'Breed',
                                               labelStyle:
                                                   TextStyle(color: Colors.grey),
                                               filled: true,
@@ -138,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ElevatedButton.icon(
                                             onPressed: () {},
                                             icon: Icon(Icons.qr_code_scanner),
-                                            label: Text('QR Code Kaasi'),
+                                            label: Text('Scan QR Code'),
                                             style: ElevatedButton.styleFrom(
                                               foregroundColor: Colors.white,
                                               backgroundColor: Color.fromARGB(
@@ -153,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ElevatedButton(
                                             onPressed: () {},
                                             child: Text(
-                                              'Ergi',
+                                              'Submit',
                                               style: TextStyle(
                                                   fontSize: 15,
                                                   color: Colors.white),
@@ -187,7 +185,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           },
                                           child: QuickOptionCard(
                                             iconPath: 'assets/location.png',
-                                            label: 'Horiiko Naa barbadi',
+                                            label: 'Locate My herd',
                                             backgroundColor:
                                                 Color.fromARGB(255, 12, 83, 17),
                                           ),
@@ -199,7 +197,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           },
                                           child: QuickOptionCard(
                                             iconPath: 'assets/herd.png',
-                                            label: 'fayyaa hori',
+                                            label: 'Herd Health',
                                             backgroundColor:
                                                 Color.fromARGB(255, 12, 83, 17),
                                           ),
@@ -211,7 +209,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           },
                                           child: QuickOptionCard(
                                             iconPath: 'assets/vaccine.png',
-                                            label: 'Talaalli',
+                                            label: 'Medication',
                                             backgroundColor:
                                                 Color.fromARGB(255, 12, 83, 17),
                                           ),
@@ -223,7 +221,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           },
                                           child: QuickOptionCard(
                                             iconPath: 'assets/phone.png',
-                                            label: 'Doctora Qunnamuf',
+                                            label: 'Telemedicine',
                                             backgroundColor:
                                                 Color.fromARGB(255, 12, 83, 17),
                                           ),

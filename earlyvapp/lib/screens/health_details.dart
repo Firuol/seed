@@ -35,7 +35,7 @@ class HealthDetails extends StatelessWidget {
                           ),
                           SizedBox(width: 10),
                           Text(
-                            "Fayyaa Hori",
+                            "Herd health",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -43,7 +43,7 @@ class HealthDetails extends StatelessWidget {
                           ),
                           Spacer(),
                           Text(
-                            "Id Q/bulaa: #456pqr",
+                            "FarmID: #456pqr",
                             style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.bold,

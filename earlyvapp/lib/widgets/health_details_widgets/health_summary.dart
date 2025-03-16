@@ -72,7 +72,7 @@ class _AnimalHealthWidgetState extends State<AnimalHealthWidget> {
                   style: TextStyle(fontSize: 15, color: Colors.black),
                   children: [
                     TextSpan(
-                      text: 'ID Hori: ',
+                      text: 'Animal ID: ',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     TextSpan(
@@ -84,7 +84,7 @@ class _AnimalHealthWidgetState extends State<AnimalHealthWidget> {
               ),
               Row(
                 children: [
-                  Text('Haala:',
+                  Text('Status:',
                       style: TextStyle(
                         fontSize: 15,
                         color: Colors.black,
@@ -100,7 +100,7 @@ class _AnimalHealthWidgetState extends State<AnimalHealthWidget> {
                   ),
                   SizedBox(width: 2),
                   Text(
-                    'Haala Sodachisa',
+                    'Critical',
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.black,
@@ -120,25 +120,25 @@ class _AnimalHealthWidgetState extends State<AnimalHealthWidget> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               _buildHealthParameter(
-                title: 'Ho,a Qaama',
+                title: 'Temperature',
                 iconPath: 'assets/temperature.png',
                 value: '${temperature.toStringAsFixed(1)}°C',
-                status: temperature > 39 ? 'olaanaa' : 'gaarii',
+                status: temperature > 39 ? 'High' : 'Normal',
                 statusColor:
                     temperature > 39 ? Color(0xFFF20000) : Colors.green,
               ),
               _buildHealthParameter(
-                title: 'Dha,ana onnee',
+                title: 'Heart Beat',
                 iconPath: 'assets/heart.png',
                 value: '$heartbeat bpm',
-                status: heartbeat > 120 ? 'olaanaa' : 'gaarii',
+                status: heartbeat > 120 ? 'High' : 'Normal',
                 statusColor: heartbeat > 120 ? Color(0xFFF20000) : Colors.green,
               ),
               _buildHealthParameter(
-                title: 'Dh/dhiigaa',
+                title: 'Blood Pressure',
                 iconPath: 'assets/bp.png',
                 value: bloodPressure,
-                status: _isHighBP(bloodPressure) ? 'olaanaa' : 'gaarii',
+                status: _isHighBP(bloodPressure) ? 'High' : 'Normal',
                 statusColor:
                     _isHighBP(bloodPressure) ? Color(0xFFF20000) : Colors.green,
               ),
