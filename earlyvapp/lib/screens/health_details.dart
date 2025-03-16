@@ -12,11 +12,12 @@ class HealthDetails extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Image.asset(
-              'assets/background_signup.png', 
-              fit: BoxFit.cover, 
+              'assets/background_signup.png',
+              fit: BoxFit.cover,
             ),
           ),
-          SingleChildScrollView(  // Make the content scrollable
+          SingleChildScrollView(
+            // Make the content scrollable
             child: Column(
               children: [
                 TopNavigationBar(),
@@ -34,7 +35,7 @@ class HealthDetails extends StatelessWidget {
                           ),
                           SizedBox(width: 10),
                           Text(
-                            "Herd health",
+                            "Fayyaa Hori",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -42,7 +43,7 @@ class HealthDetails extends StatelessWidget {
                           ),
                           Spacer(),
                           Text(
-                            "FarmID: #456pqr",
+                            "Id Q/bulaa: #456pqr",
                             style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.bold,
@@ -51,10 +52,9 @@ class HealthDetails extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 20), 
-                      
+                      SizedBox(height: 20),
                       AnimalHealthWidget(),
-                       SizedBox(height: 20),
+                      SizedBox(height: 20),
                       PotentialDiseasesWidget(),
                     ],
                   ),

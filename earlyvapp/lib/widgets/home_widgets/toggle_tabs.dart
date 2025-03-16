@@ -25,14 +25,14 @@ class _ToggleTabsState extends State<ToggleTabs> {
       width: 400,
       height: 75,
       decoration: BoxDecoration(
-        color: Color(0xFFB3DA6C),
+        color: Color.fromARGB(255, 80, 161, 17),
         borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _buildTab('Quick Options', 0),
-          _buildTab('Register Animal', 1),
+          _buildTab('Horii', 0),
+          _buildTab('Haaraa Galmeessuf', 1),
         ],
       ),
     );

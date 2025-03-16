@@ -3,19 +3,22 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class PotentialDiseasesWidget extends StatefulWidget {
   @override
-  _PotentialDiseasesWidgetState createState() => _PotentialDiseasesWidgetState();
+  _PotentialDiseasesWidgetState createState() =>
+      _PotentialDiseasesWidgetState();
 }
 
 class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
   double diseaseProbability = 0.7;
-  String diseaseName = "Foot and Mouth Disease";
+  String diseaseName = "Gandii";
   Color diseaseColor = Color(0xFFFF813D);
 
-  void updateIndicator(double probability, String name, ) {
+  void updateIndicator(
+    double probability,
+    String name,
+  ) {
     setState(() {
       diseaseProbability = probability;
       diseaseName = name;
-    
     });
   }
 
@@ -32,7 +35,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            "Potential Diseases",
+            "Tilmaama Dhibee",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
@@ -77,7 +80,10 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      updateIndicator(0.7, "Foot and Mouth Disease", );
+                      updateIndicator(
+                        0.7,
+                        "Gandii",
+                      );
                     },
                     child: Container(
                       width: 170,
@@ -110,7 +116,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                                     ),
                                   ),
                                   Text(
-                                    "Foot and Mouth Disease",
+                                    "Gandii",
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
@@ -125,7 +131,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                           ),
                           SizedBox(height: 5),
                           Text(
-                            "Highly contagious viral disease affecting cloven-hoofed animals.",
+                            "Hoaa qaamaa olaanaa fi dha'ana onnee yeroo yeroon jijiramu",
                             style: TextStyle(
                               fontSize: 10,
                               color: Colors.grey[700],
@@ -138,7 +144,10 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                   SizedBox(height: 10),
                   GestureDetector(
                     onTap: () {
-                      updateIndicator(0.3, "Lumpy Skin Disease", );
+                      updateIndicator(
+                        0.3,
+                        "Abbaa Sangaa",
+                      );
                     },
                     child: Container(
                       width: 170,
@@ -171,7 +180,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                                     ),
                                   ),
                                   Text(
-                                    "Lumpy Skin Disease",
+                                    "Hooksisaa",
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
@@ -186,7 +195,7 @@ class _PotentialDiseasesWidgetState extends State<PotentialDiseasesWidget> {
                           ),
                           SizedBox(height: 5),
                           Text(
-                            "A disease affecting cattle, characterized by lumps on the skin.",
+                            "yeroo bay'ee jabbiile xixiqo irratti kan mul'atu.",
                             style: TextStyle(
                               fontSize: 10,
                               color: Colors.grey[700],

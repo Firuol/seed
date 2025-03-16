@@ -15,16 +15,16 @@ class CustomInputField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       obscureText: obscureText,
-      style: GoogleFonts.kantumruyPro(color: const Color.fromARGB(255, 0, 0, 0)),
+      style:
+          GoogleFonts.kantumruyPro(color: const Color.fromARGB(255, 0, 0, 0)),
       decoration: InputDecoration(
         hintText: placeholder,
         hintStyle: GoogleFonts.kantumruyPro(
-          color: const Color.fromARGB(255, 88, 87, 87).withOpacity(0.40),
+          color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.40),
           fontSize: 20,
-
         ),
         filled: true,
-        fillColor: Colors.white.withOpacity(0.62),
+        fillColor: const Color.fromARGB(255, 238, 240, 238).withOpacity(0.62),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
           borderSide: BorderSide.none,

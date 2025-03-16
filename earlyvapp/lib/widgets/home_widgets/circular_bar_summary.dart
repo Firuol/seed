@@ -22,7 +22,6 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
   late double atRiskPercent;
   late double criticalPercent;
 
-  
   late String displayLabel;
   late int displayCount;
   late Color displayColor;
@@ -36,8 +35,7 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
     atRiskPercent = widget.atRiskCount / total;
     criticalPercent = widget.criticalCount / total;
 
-
-    displayLabel = 'Healthy Herd';
+    displayLabel = 'Horii fayyaa';
     displayCount = widget.healthyCount;
     displayColor = Color(0xFF4DE342);
     displayPercent = healthyPercent;
@@ -50,38 +48,44 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
         Stack(
           alignment: Alignment.center,
           children: [
-            
             CircularPercentIndicator(
               radius: 70.0,
               lineWidth: 10.0,
-              percent: displayLabel == 'Healthy Herd' ? displayPercent : 0.0,
-              progressColor: displayLabel == 'Healthy Herd' ? displayColor : Colors.transparent,
+              percent: displayLabel == 'Fayyalessa' ? displayPercent : 0.0,
+              progressColor: displayLabel == 'Fayyalessa'
+                  ? displayColor
+                  : Colors.transparent,
               backgroundColor: Colors.transparent,
               circularStrokeCap: CircularStrokeCap.round,
             ),
-            
             CircularPercentIndicator(
               radius: 70.0,
               lineWidth: 10.0,
-              percent: displayLabel == 'At Risk' ? displayPercent : 0.0,
-              progressColor: displayLabel == 'At Risk' ? displayColor : Colors.transparent,
+              percent: displayLabel == 'Dhukkubsata' ? displayPercent : 0.0,
+              progressColor: displayLabel == 'Dhukkubsata'
+                  ? displayColor
+                  : Colors.transparent,
               backgroundColor: Colors.transparent,
               circularStrokeCap: CircularStrokeCap.round,
             ),
-
             CircularPercentIndicator(
               radius: 70.0,
               lineWidth: 10.0,
-              percent: displayLabel == 'Critical' ? displayPercent : 0.0,
-              progressColor: displayLabel == 'Critical' ? displayColor : Colors.transparent,
+              percent: displayLabel == 'B/Dhukkubsata' ? displayPercent : 0.0,
+              progressColor: displayLabel == 'B/Dhukkubsata'
+                  ? displayColor
+                  : Colors.transparent,
               backgroundColor: Colors.transparent,
               circularStrokeCap: CircularStrokeCap.round,
             ),
-            
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('$displayCount', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: displayColor)),
+                Text('$displayCount',
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: displayColor)),
                 Text(displayLabel, style: TextStyle(fontSize: 10)),
               ],
             ),
@@ -91,25 +95,32 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildLegend(Color(0xFF4DE342), 'Healthy Herd', widget.healthyCount, 'Healthy', Color(0xFF4DE342), healthyPercent),
-            _buildLegend(Color(0xFFFF813D), 'At Risk', widget.atRiskCount, 'At Risk', Color(0xFFFF813D), atRiskPercent),
-            _buildLegend(Color(0xFFF20000), 'Critical', widget.criticalCount, 'Critical', Color(0xFFF20000), criticalPercent),
+            _buildLegend(Color(0xFF4DE342), 'Fayyalessa', widget.healthyCount,
+                'Fayyalessa', Color(0xFF4DE342), healthyPercent),
+            _buildLegend(Color(0xFFFF813D), 'Dhukkubsata', widget.atRiskCount,
+                'Dhukkubsata', Color(0xFFFF813D), atRiskPercent),
+            _buildLegend(
+                Color(0xFFF20000),
+                'B/Dhukkubsata',
+                widget.criticalCount,
+                'B/Dhukkubsata',
+                Color(0xFFF20000),
+                criticalPercent),
           ],
         ),
       ],
     );
   }
 
-  Widget _buildLegend(Color color, String label, int count, String labelText, Color progressColor, double percent) {
+  Widget _buildLegend(Color color, String label, int count, String labelText,
+      Color progressColor, double percent) {
     return GestureDetector(
       onTap: () {
         setState(() {
-          
           displayLabel = label;
           displayCount = count;
           displayColor = progressColor;
           displayPercent = percent;
-
 
           if (labelText == 'Healthy') {
             healthyPercent = count / total;

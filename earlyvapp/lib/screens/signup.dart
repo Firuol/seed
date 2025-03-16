@@ -10,7 +10,7 @@ class SignupScreen extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            'assets/background_signup.png', 
+            'assets/background_signup.png',
             fit: BoxFit.cover,
           ),
           SafeArea(
@@ -19,41 +19,39 @@ class SignupScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(height: 80), 
+                  SizedBox(height: 80),
                   Image.asset(
                     'assets/earlyvet_logo.png',
                     height: 200,
                   ),
                   SizedBox(height: 60),
                   CustomInputField(
-                    placeholder: 'Username',
+                    placeholder: 'Maqaa Tajaajilama',
                   ),
                   SizedBox(height: 20),
                   CustomInputField(
-                    placeholder: 'Password',
+                    placeholder: 'Lakk iciitii',
                     obscureText: true,
                   ),
                   SizedBox(height: 20),
                   CustomInputField(
-                    placeholder: 'Confirm Password',
+                    placeholder: 'Lakk iciitii mirkanefadhu',
                     obscureText: true,
                   ),
                   SizedBox(height: 40),
                   SizedBox(
                     width: 180,
-                    height: 60,
+                    height: 40,
                     child: ElevatedButton(
-                      onPressed: () {
-                        
-                      },
+                      onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF20751B),
+                        backgroundColor: Color.fromARGB(255, 12, 83, 17),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
                       ),
                       child: Text(
-                        'Sign Up',
+                        'Na Galmeessi',
                         style: GoogleFonts.kantumruyPro(
                           fontSize: 30,
                           color: Colors.white,
@@ -64,10 +62,10 @@ class SignupScreen extends StatelessWidget {
                   SizedBox(height: 20),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pop(context); 
+                      Navigator.pop(context);
                     },
                     child: Text(
-                      "Back to Login",
+                      "Haaraa miti",
                       style: GoogleFonts.kantumruyPro(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -75,7 +73,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 40), 
+                  SizedBox(height: 40),
                 ],
               ),
             ),

@@ -4,7 +4,6 @@ import '../widgets/home_widgets/bottom_navigation_bar.dart';
 import '../widgets/home_widgets/circular_bar_summary.dart';
 import '../widgets/home_widgets/toggle_tabs.dart';
 import '../widgets/home_widgets/quick_option_card.dart';
-import '../screens/animals_list.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -12,12 +11,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool showRegisterAnimal = false;  
+  bool showRegisterAnimal = false;
 
-  
   void toggleView(int tabIndex) {
     setState(() {
-      showRegisterAnimal = (tabIndex == 1);  
+      showRegisterAnimal = (tabIndex == 1);
     });
   }
 
@@ -46,18 +44,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Welcome Back Eshetu!",
-                              style: TextStyle(color: Color(0xFF20751B), fontSize: 20),
-                            ),
-                            Text(
-                              "FarmId: #456pqr",
-                              style: TextStyle(color: Color(0xFF20751B), fontSize: 15, fontWeight: FontWeight.bold),
+                              "Baga Nagaan dhuftee Eshetu!",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 12, 83, 17),
+                                  fontSize: 20),
                             ),
                           ],
                         ),
                         SizedBox(height: 20),
-
-
                         Container(
                           padding: EdgeInsets.all(20),
                           decoration: BoxDecoration(
@@ -67,16 +61,17 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              CircularBarSummary(healthyCount: 20, atRiskCount: 3, criticalCount: 1),
+                              CircularBarSummary(
+                                  healthyCount: 20,
+                                  atRiskCount: 3,
+                                  criticalCount: 1),
                               SizedBox(height: 7),
                               ToggleTabs(
                                 onTabChanged: (index) {
-                                  toggleView(index);  
+                                  toggleView(index);
                                 },
                               ),
                               SizedBox(height: 10),
-
-
                               showRegisterAnimal
                                   ? Container(
                                       padding: EdgeInsets.all(20),
@@ -85,82 +80,93 @@ class _HomeScreenState extends State<HomeScreen> {
                                         borderRadius: BorderRadius.circular(20),
                                       ),
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-
                                           Text(
-                                            'Register Animal',
-                                            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                                            'Hori Galmeesu',
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.bold),
                                           ),
                                           SizedBox(height: 10),
-
-                                          
                                           DropdownButtonFormField<String>(
                                             decoration: InputDecoration(
-                                              labelText: 'Animal Type',
-                                              labelStyle: TextStyle(color: Colors.grey),
+                                              labelText: 'Gosa Hori',
+                                              labelStyle:
+                                                  TextStyle(color: Colors.grey),
                                               filled: true,
-                                              fillColor: Color(0xFF266973).withOpacity(0.16),
+                                              fillColor: Color(0xFF266973)
+                                                  .withOpacity(0.16),
                                               border: OutlineInputBorder(
-                                                borderRadius: BorderRadius.circular(10),
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
                                                 borderSide: BorderSide.none,
                                               ),
                                             ),
-                                            items: ['Cow', 'Ox', 'Calf'].map((String value) {
+                                            items: [
+                                              'Sawwaa',
+                                              'Qotiyyo',
+                                              'Jabbii'
+                                            ].map((String value) {
                                               return DropdownMenuItem<String>(
                                                 value: value,
-                                                child: Text(value, style: TextStyle(color: Colors.black)),
+                                                child: Text(value,
+                                                    style: TextStyle(
+                                                        color: Colors.black)),
                                               );
                                             }).toList(),
                                             onChanged: (value) {},
                                           ),
                                           SizedBox(height: 20),
-
-
                                           TextFormField(
                                             decoration: InputDecoration(
-                                              labelText: 'Breed',
-                                              labelStyle: TextStyle(color: Colors.grey),
+                                              labelText: 'Gosa',
+                                              labelStyle:
+                                                  TextStyle(color: Colors.grey),
                                               filled: true,
-                                              fillColor: Color(0xFF266973).withOpacity(0.16),
+                                              fillColor: Color(0xFF266973)
+                                                  .withOpacity(0.16),
                                               border: OutlineInputBorder(
-                                                borderRadius: BorderRadius.circular(10),
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
                                                 borderSide: BorderSide.none,
                                               ),
                                             ),
                                           ),
                                           SizedBox(height: 20),
-
-                                          
                                           ElevatedButton.icon(
-                                            onPressed: () {
-                                              
-                                            },
+                                            onPressed: () {},
                                             icon: Icon(Icons.qr_code_scanner),
-                                            label: Text('Scan QR Code'),
+                                            label: Text('QR Code Kaasi'),
                                             style: ElevatedButton.styleFrom(
-                                              foregroundColor: Colors.white, backgroundColor: Color(0xFF20751B),
+                                              foregroundColor: Colors.white,
+                                              backgroundColor: Color.fromARGB(
+                                                  255, 12, 83, 17),
                                               shape: RoundedRectangleBorder(
-                                                borderRadius: BorderRadius.circular(10),
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
                                               ),
                                             ),
                                           ),
                                           SizedBox(height: 20),
-
-                                          
                                           ElevatedButton(
-                                            onPressed: () {
-                                              
-                                            },
+                                            onPressed: () {},
                                             child: Text(
-                                              'Submit',
-                                              style: TextStyle(fontSize: 15, color: Colors.white),
+                                              'Ergi',
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Colors.white),
                                             ),
                                             style: ElevatedButton.styleFrom(
-                                              foregroundColor: Colors.white, backgroundColor: Color(0xFF20751B),
-                                              padding: EdgeInsets.symmetric(vertical: 15),
+                                              foregroundColor: Colors.white,
+                                              backgroundColor: Color.fromARGB(
+                                                  255, 12, 83, 17),
+                                              padding: EdgeInsets.symmetric(
+                                                  vertical: 15),
                                               shape: RoundedRectangleBorder(
-                                                borderRadius: BorderRadius.circular(10),
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
                                               ),
                                             ),
                                           ),
@@ -174,31 +180,53 @@ class _HomeScreenState extends State<HomeScreen> {
                                       crossAxisSpacing: 20,
                                       mainAxisSpacing: 10,
                                       children: [
-                                        QuickOptionCard(
-                                          iconPath: 'assets/location.png',
-                                          label: 'Locate My herd',
-                                          backgroundColor: Color(0xFF176359),
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, '/locator');
+                                          },
+                                          child: QuickOptionCard(
+                                            iconPath: 'assets/location.png',
+                                            label: 'Horiiko Naa barbadi',
+                                            backgroundColor:
+                                                Color.fromARGB(255, 12, 83, 17),
+                                          ),
                                         ),
                                         GestureDetector(
-                                                    onTap: () {
-                                                      Navigator.pushNamed(context, '/animalList');
-
-                                                    },
-                                                    child: QuickOptionCard(
-                                                      iconPath: 'assets/herd.png',
-                                                      label: 'Herd Health',
-                                                      backgroundColor: Color(0xFF176319),
-                                                    ),
-                                                  ),
-                                        QuickOptionCard(
-                                          iconPath: 'assets/vaccine.png',
-                                          label: 'Medication',
-                                          backgroundColor: Color(0xFF406317),
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, '/animalList');
+                                          },
+                                          child: QuickOptionCard(
+                                            iconPath: 'assets/herd.png',
+                                            label: 'fayyaa hori',
+                                            backgroundColor:
+                                                Color.fromARGB(255, 12, 83, 17),
+                                          ),
                                         ),
-                                        QuickOptionCard(
-                                          iconPath: 'assets/phone.png',
-                                          label: 'Telemedicine',
-                                          backgroundColor: Color(0xFF175063),
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, '/vacine');
+                                          },
+                                          child: QuickOptionCard(
+                                            iconPath: 'assets/vaccine.png',
+                                            label: 'Talaalli',
+                                            backgroundColor:
+                                                Color.fromARGB(255, 12, 83, 17),
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.pushNamed(
+                                                context, '/telemedicine');
+                                          },
+                                          child: QuickOptionCard(
+                                            iconPath: 'assets/phone.png',
+                                            label: 'Doctora Qunnamuf',
+                                            backgroundColor:
+                                                Color.fromARGB(255, 12, 83, 17),
+                                          ),
                                         ),
                                       ],
                                     ),

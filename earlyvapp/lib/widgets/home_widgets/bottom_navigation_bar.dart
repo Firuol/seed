@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../screens/home_screen.dart'; 
+import '../../screens/home_screen.dart';
 
 class BottomNavigationBarCustom extends StatelessWidget {
   @override
@@ -8,7 +8,7 @@ class BottomNavigationBarCustom extends StatelessWidget {
       height: 60,
       padding: EdgeInsets.symmetric(horizontal: 30),
       decoration: BoxDecoration(
-        color: Color(0xFFB3DA6C),
+        color: Color.fromARGB(255, 12, 83, 17),
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
@@ -22,7 +22,7 @@ class BottomNavigationBarCustom extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HomeScreen(), 
+                  builder: (context) => HomeScreen(),
                 ),
               );
             },
@@ -30,14 +30,12 @@ class BottomNavigationBarCustom extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              
+              Navigator.pushNamed(context, '/animalList');
             },
             child: Image.asset('assets/cattle.png', width: 35, height: 35),
           ),
           GestureDetector(
-            onTap: () {
-
-            },
+            onTap: () {},
             child: Image.asset('assets/help.png', width: 35, height: 35),
           ),
         ],

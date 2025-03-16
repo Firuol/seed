@@ -1,8 +1,10 @@
 import 'package:earlyvapp/screens/health_details.dart';
+import 'package:earlyvapp/screens/locator.dart';
+import 'package:earlyvapp/screens/telemed.dart';
+import 'package:earlyvapp/screens/Vacine.dart';
 import './screens/animals_list.dart';
 import 'package:flutter/material.dart';
 import 'screens/login.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -14,18 +16,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Earlyvet App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color.fromARGB(255, 12, 83, 17),
+        ),
         useMaterial3: true,
       ),
       initialRoute: '/login',
       routes: {
-      '/login': (context) => LoginScreen(),
-      '/animalList': (context) => AnimalListScreen(), 
-      '/healthDetails': (context) => HealthDetails(), 
-},
-
+        '/login': (context) => LoginScreen(),
+        '/animalList': (context) => AnimalListScreen(),
+        '/healthDetails': (context) => HealthDetails(),
+        '/locator': (context) => Locator(),
+        '/telemedicine': (context) => Telemed(),
+        '/vacine': (context) => vacine(),
+      },
     );
   }
 }
