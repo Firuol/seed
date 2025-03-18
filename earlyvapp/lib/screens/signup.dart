@@ -12,10 +12,10 @@ class SignupScreen extends StatelessWidget {
           children: [
             // Green Background with Curved Shape
             ClipPath(
-              clipper: HeaderClipper(), // Custom clipper for smooth curve
+              clipper: HeaderClipper(),
               child: Container(
                 width: double.infinity,
-                height: 250, // Adjusted height
+                height: 280, // Increased height to fit logo
                 decoration: BoxDecoration(
                   color: Color(0xFF14AF1B), // Green color
                 ),
@@ -23,6 +23,15 @@ class SignupScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(height: 40), // Spacing for status bar
+
+                    // Logo
+                    Image.asset(
+                      'assets/earlyvet_logo.png', // Path to logo
+                      height: 80, // Adjust logo size
+                    ),
+
+                    SizedBox(height: 10), // Space below logo
+
                     Text(
                       'Create Account',
                       style: TextStyle(
@@ -44,90 +53,45 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
 
-            // Input Fields Section
+            // Input Fields
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Full Name
                   SizedBox(height: 20),
+
+                  // Full Name
                   Text(
                     'Full Name',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 8),
                   TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Input Text Here',
-                      hintStyle: TextStyle(color: Colors.grey),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(color: Colors.green, width: 2),
-                      ),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 14),
-                    ),
+                    decoration: _inputDecoration('Enter your full name'),
                   ),
 
-                  // Phone Number/Email
+                  // Phone Number
                   SizedBox(height: 15),
                   Text(
-                    'Phone number/Email',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    'Phone number',
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 8),
                   TextField(
                     keyboardType: TextInputType.phone,
-                    inputFormatters: [
-                      FilteringTextInputFormatter.digitsOnly,
-                      LengthLimitingTextInputFormatter(9),
-                    ],
-                    decoration: InputDecoration(
-                      hintText: '+251-',
-                      hintStyle: TextStyle(color: Colors.black),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(color: Colors.green, width: 2),
-                      ),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 14),
-                    ),
+                    decoration: _inputDecoration('+251-'),
                   ),
 
                   // National ID
                   SizedBox(height: 15),
                   Text(
                     'National ID',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 8),
                   TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Fayda Number',
-                      hintStyle: TextStyle(color: Colors.grey),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(color: Colors.green, width: 2),
-                      ),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 14),
-                    ),
+                    decoration: _inputDecoration('Enter your Fayda number'),
                   ),
 
                   // Sign Up Button
@@ -163,14 +127,30 @@ class SignupScreen extends StatelessWidget {
       ),
     );
   }
+
+  // Common Input Decoration
+  InputDecoration _inputDecoration(String hintText) {
+    return InputDecoration(
+      hintText: hintText,
+      hintStyle: TextStyle(color: Colors.grey),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(8),
+        borderSide: BorderSide(color: Colors.green, width: 2),
+      ),
+      contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 14),
+    );
+  }
 }
 
-// Custom Clipper for Header Curve
+// Custom Clipper for Curved Header
 class HeaderClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     final path = Path();
-    path.lineTo(0, size.height * 0.8); 
+    path.lineTo(0, size.height * 0.8);
     path.quadraticBezierTo(size.width / 2, size.height + 30, size.width, size.height * 0.8);
     path.lineTo(size.width, 0);
     path.close();
@@ -178,7 +158,5 @@ class HeaderClipper extends CustomClipper<Path> {
   }
 
   @override
-  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-    return false;
-  }
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
