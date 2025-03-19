@@ -132,8 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             label: Text('Scan QR Code'),
                                             style: ElevatedButton.styleFrom(
                                               foregroundColor: Colors.white,
-                                              backgroundColor: Color.fromARGB(
-                                                  255, 12, 83, 17),
+                                              backgroundColor: Color(0xFF14AF1B),
                                               shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(10),
@@ -151,8 +150,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ),
                                             style: ElevatedButton.styleFrom(
                                               foregroundColor: Colors.white,
-                                              backgroundColor: Color.fromARGB(
-                                                  255, 12, 83, 17),
+                                              backgroundColor: Color(0xFF14AF1B),
                                               padding: EdgeInsets.symmetric(
                                                   vertical: 15),
                                               shape: RoundedRectangleBorder(
