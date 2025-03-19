@@ -43,14 +43,18 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Stack(
           alignment: Alignment.center,
           children: [
             CircularPercentIndicator(
-              radius: 70.0,
-              lineWidth: 10.0,
+              radius: screenWidth * 0.18,
+              lineWidth: screenWidth * 0.025,
               percent: displayLabel == 'Healthy Herd' ? displayPercent : 0.0,
               progressColor: displayLabel == 'Healthy Herd'
                   ? displayColor
@@ -59,8 +63,8 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
               circularStrokeCap: CircularStrokeCap.round,
             ),
             CircularPercentIndicator(
-              radius: 70.0,
-              lineWidth: 10.0,
+              radius: screenWidth * 0.18,
+              lineWidth: screenWidth * 0.025,
               percent: displayLabel == 'At Risk' ? displayPercent : 0.0,
               progressColor: displayLabel == 'At Risk'
                   ? displayColor
@@ -69,8 +73,8 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
               circularStrokeCap: CircularStrokeCap.round,
             ),
             CircularPercentIndicator(
-              radius: 70.0,
-              lineWidth: 10.0,
+              radius: screenWidth * 0.18,
+              lineWidth: screenWidth * 0.025,
               percent: displayLabel == 'Critical' ? displayPercent : 0.0,
               progressColor: displayLabel == 'Critical'
                   ? displayColor
@@ -83,15 +87,15 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
               children: [
                 Text('$displayCount',
                     style: TextStyle(
-                        fontSize: 24,
+                        fontSize: screenWidth * 0.06,
                         fontWeight: FontWeight.bold,
                         color: displayColor)),
-                Text(displayLabel, style: TextStyle(fontSize: 10)),
+                Text(displayLabel, style: TextStyle(fontSize: screenWidth * 0.03)),
               ],
             ),
           ],
         ),
-        SizedBox(width: 20),
+        SizedBox(width: screenWidth * 0.05),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -114,6 +118,7 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
 
   Widget _buildLegend(Color color, String label, int count, String labelText,
       Color progressColor, double percent) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: () {
         setState(() {
@@ -134,12 +139,12 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
       child: Row(
         children: [
           Container(
-            width: 17,
-            height: 17,
+            width: screenWidth * 0.04,
+            height: screenWidth * 0.04,
             decoration: BoxDecoration(color: color, shape: BoxShape.circle),
           ),
-          SizedBox(width: 8),
-          Text('$label ($count)'),
+          SizedBox(width: screenWidth * 0.02),
+          Text('$label ($count)', style: TextStyle(fontSize: screenWidth * 0.04)),
         ],
       ),
     );

@@ -24,12 +24,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned.fill(
-            child: Image.asset(
-              'assets/background_home.png',
-              fit: BoxFit.cover,
-            ),
-          ),
           Column(
             children: [
               TopNavigationBar(),

@@ -21,15 +21,11 @@ class LoginScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(height: 40),
-
-                    // Logo
+                                 // Logo
                     Image.asset(
                       'assets/earlyvet_logo.png',
-                      height: 80,
+                      height: 150,
                     ),
-
-                    SizedBox(height: 10),
 
                     Text(
                       'Welcome Back!',
