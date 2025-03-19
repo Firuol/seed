@@ -40,12 +40,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text(
                               "Welcome Back Eshetu!",
                               style: TextStyle(
-                                  color: Color.fromARGB(255, 12, 83, 17),
+                                  color: Color(0xFF14AF1B),
                                   fontSize: 20),
                             ),
                           ],
                         ),
-                        SizedBox(height: 20),
                         Container(
                           padding: EdgeInsets.all(20),
                           decoration: BoxDecoration(
@@ -59,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   healthyCount: 20,
                                   atRiskCount: 3,
                                   criticalCount: 1),
-                              SizedBox(height: 7),
+                              SizedBox(height: 10),
                               ToggleTabs(
                                 onTabChanged: (index) {
                                   toggleView(index);
@@ -231,12 +230,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ],
-          ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: BottomNavigationBarCustom(),
           ),
         ],
       ),

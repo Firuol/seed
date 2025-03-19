@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'signup.dart';
+import 'login.dart';
 
 class GetStartedPage extends StatelessWidget {
   @override
@@ -47,12 +47,12 @@ Text(
                       'Your herd, your control',
                       style: TextStyle(fontSize: 16, color: Color(0xFF14AF1B)),
                     ),
-            SizedBox(height: 145), 
+            SizedBox(height: 100), 
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SignupScreen()),
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
                 );
               },
               child: Text(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screens/signup.dart';
-import '../screens/home_screen.dart';
+import '../screens/navigator.dart';
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -83,7 +83,7 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {
                          Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                          MaterialPageRoute(builder: (context) => DashboardScreen()),
                         );
                       },
                       child: Text(

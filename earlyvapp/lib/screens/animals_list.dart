@@ -17,7 +17,6 @@ class AnimalListScreen extends StatelessWidget {
           ),
           Column(
             children: [
-              TopNavigationBar(),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: Column(
@@ -103,7 +102,6 @@ class AnimalListScreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBarCustom(),
     );
   }
 }

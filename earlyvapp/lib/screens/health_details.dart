@@ -64,7 +64,6 @@ class HealthDetails extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBarCustom(),
     );
   }
 }

@@ -23,16 +23,16 @@ class _ToggleTabsState extends State<ToggleTabs> {
   Widget build(BuildContext context) {
     return Container(
       width: 400,
-      height: 75,
+      height: 50,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 80, 161, 17),
-        borderRadius: BorderRadius.circular(30),
+        color: Color(0xFF14AF1B),
+        borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           _buildTab('Main', 0),
-          _buildTab('New', 1),
+          _buildTab('Register', 1),
         ],
       ),
     );
@@ -44,18 +44,18 @@ class _ToggleTabsState extends State<ToggleTabs> {
       onTap: () => _selectTab(index),
       child: Container(
         width: 122,
-        height: 41,
+        height: 30,
         decoration: isActive
             ? BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(15),
               )
             : null,
         alignment: Alignment.center,
         child: Text(
           text,
           style: TextStyle(
-            color: isActive ? Colors.black : Colors.white,
+            color: isActive ? Color(0xFF14AF1B) : Colors.white,
             fontSize: 15,
             fontWeight: isActive ? FontWeight.w400 : FontWeight.bold,
           ),
