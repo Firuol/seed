@@ -179,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           },
                                           child: QuickOptionCard(
                                             iconPath: 'assets/location.png',
-                                            label: 'Locate My herd',
+                                            label: 'Locator',
                                             backgroundColor:
                                                Color(0xFF14AF1B),
                                           ),

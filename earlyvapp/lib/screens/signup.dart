@@ -22,20 +22,20 @@ class SignupScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(height: 40), // Spacing for status bar
+                   
 
                     // Logo
                     Image.asset(
                       'assets/earlyvet_logo.png', // Path to logo
-                      height: 80, // Adjust logo size
+                      height: 150, // Adjust logo size
                     ),
 
-                    SizedBox(height: 10), // Space below logo
+                   
 
                     Text(
                       'Create Account',
                       style: TextStyle(
-                        fontSize: 40,
+                        fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),

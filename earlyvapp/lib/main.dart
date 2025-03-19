@@ -5,6 +5,7 @@ import 'package:earlyvapp/screens/Vacine.dart';
 import './screens/animals_list.dart';
 import 'package:flutter/material.dart';
 import 'screens/login.dart';
+import 'screens/getstarted.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,14 +25,15 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      initialRoute: '/login',
+      initialRoute: '/getstarted',
       routes: {
         '/login': (context) => LoginScreen(),
         '/animalList': (context) => AnimalListScreen(),
         '/healthDetails': (context) => HealthDetails(),
         '/locator': (context) => Locator(),
         '/telemedicine': (context) => Telemed(),
-        '/vacine': (context) => vacine(),
+        '/vacine': (context) => Vacine(),
+        '/getstarted': (context) => GetStartedPage(),
       },
     );
   }

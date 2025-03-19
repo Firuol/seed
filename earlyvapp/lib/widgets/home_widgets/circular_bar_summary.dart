@@ -99,8 +99,8 @@ class _CircularBarSummaryState extends State<CircularBarSummary> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildLegend(Color(0xFF4DE342), 'Healthy Herd', widget.healthyCount,
-                'Healthy Herd', Color(0xFF4DE342), healthyPercent),
+            _buildLegend(Color(0xFF4DE342), 'Healthy', widget.healthyCount,
+                'Healthy', Color(0xFF4DE342), healthyPercent),
             _buildLegend(Color(0xFFFF813D), 'At Risk', widget.atRiskCount,
                 'At Risk', Color(0xFFFF813D), atRiskPercent),
             _buildLegend(

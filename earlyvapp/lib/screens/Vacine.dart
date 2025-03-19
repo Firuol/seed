@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class vacine extends StatelessWidget {
+class Vacine extends StatelessWidget {
   // Static vaccination schedule data
   final List<Map<String, String>> vaccinationSchedules = [
     {
