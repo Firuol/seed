@@ -178,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             iconPath: 'assets/location.png',
                                             label: 'Locator',
                                             backgroundColor:
-                                               Color(0xFF14AF1B),
+                                             Color(0xFF14AF1B),
                                           ),
                                         ),
                                         GestureDetector(
@@ -190,7 +190,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             iconPath: 'assets/herd.png',
                                             label: 'Herd Health',
                                             backgroundColor:
-                                                Color(0xFF14AF1B),
+                                             Color(0xFF14AF1B),
                                           ),
                                         ),
                                         GestureDetector(
