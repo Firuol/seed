@@ -6,6 +6,16 @@ class ProfileScreen extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Color(0xFF14AF1B)),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -97,7 +107,7 @@ class ProfileScreen extends StatelessWidget {
       child: ElevatedButton.icon(
         onPressed: () => onTap(),
         icon: Icon(icon, size: 20),
-        label: Text(text, style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold )),
+        label: Text(text, style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold)),
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.symmetric(vertical: 14),
           backgroundColor: color,

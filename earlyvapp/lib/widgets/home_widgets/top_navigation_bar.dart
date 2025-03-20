@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:earlyvapp/screens/profile.dart';
 class TopNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -31,13 +31,19 @@ class TopNavigationBar extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Padding(
+                     GestureDetector(
+                  onTap: () {Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ProfileScreen()),
+                        );},
+                  child:
+                  Padding(
                       padding: EdgeInsets.only(top: screenHeight * 0.01), // Added padding to top
                       child: CircleAvatar(
                         radius: screenHeight * 0.022, // Responsive avatar
                         backgroundImage: AssetImage('assets/user.png'),
                       ),
-                    ),
+                    ),),
                     SizedBox(height: screenHeight * 0.005),
                     Text(
                       'Eshetu Debebe',

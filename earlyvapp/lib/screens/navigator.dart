@@ -5,7 +5,6 @@ import 'animals_list.dart';
 import 'Locator.dart';
 import 'telemed.dart';
 import 'Vacine.dart';
-import 'profile.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override
@@ -20,7 +19,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
     Locator(),
     Telemed(),
     Vacine(),
-    ProfileScreen(),
   ];
 
   @override
@@ -37,7 +35,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
           Icon(Icons.location_on, size: 30, color: Color(0xFF14AF1B)), // Locator
           Icon(Icons.local_hospital, size: 30, color: Color(0xFF14AF1B)), // Telemed
           Icon(Icons.vaccines, size: 30, color: Color(0xFF14AF1B)), // Vaccine
-          Icon(Icons.person, size: 30, color: Color(0xFF14AF1B)), // Profile
         ],
         animationDuration: Duration(milliseconds: 300), // Smooth animation
         index: _pageIndex, // Keep track of the selected index
