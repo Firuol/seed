@@ -14,7 +14,7 @@ class Locator extends StatelessWidget {
           ),
         ), // Title of the AppBar
         backgroundColor:
-            Color.fromARGB(255, 12, 83, 17), // AppBar background color
+          Color(0xFF14AF1B), // AppBar background color
         leading: IconButton(
           icon: const Icon(Icons.arrow_back,
               color: Colors.white), // Back button icon

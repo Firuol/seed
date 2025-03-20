@@ -33,7 +33,7 @@ class Vacine extends StatelessWidget {
           'Vaccination Schedule',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: const Color.fromARGB(255, 12, 83, 17),
+        backgroundColor: Color(0xFF14AF1B),
       ),
       body: ListView.builder(
         itemCount: vaccinationSchedules.length,

@@ -13,7 +13,7 @@ class ChatWithDoctor extends StatelessWidget {
           '$doctorName Mariisisuuf',
           style: const TextStyle(color: Colors.white),
         ),
-        backgroundColor: const Color.fromARGB(255, 12, 83, 17),
+        backgroundColor: Color(0xFF14AF1B),
       ),
       body: Column(
         children: [
