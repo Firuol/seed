@@ -6,8 +6,18 @@ import './screens/animals_list.dart';
 import 'package:flutter/material.dart';
 import 'screens/login.dart';
 import 'screens/getstarted.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_flutter_web/webview_flutter_web.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  if (kIsWeb) {
+    WebViewPlatform.instance = WebWebViewPlatform();
+  }
+
   runApp(const MyApp());
 }
 

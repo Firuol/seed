@@ -1,8 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart'; // Import the webview_flutter package
+import 'package:webview_flutter/webview_flutter.dart';
+import 'dart:io'; // Import to check platform
 
-class Locator extends StatelessWidget {
+class Locator extends StatefulWidget {
   const Locator({Key? key}) : super(key: key);
+
+  @override
+  _LocatorState createState() => _LocatorState();
+}
+
+class _LocatorState extends State<Locator> {
+  late WebViewController controller;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Initialize the WebViewController
+    controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted);
+
+    // Load the local file for Mobile (Android & iOS)
+    if (!Platform.isAndroid && !Platform.isIOS) {
+      controller.loadRequest(Uri.parse("assets/map.html"));
+    } else {
+      controller.loadFlutterAsset("assets/map.html");
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -10,22 +34,15 @@ class Locator extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Locator Page',
-          style: TextStyle(
-            color: Colors.white, // Makes the text color white
-          ),
-        ), // Title of the AppBar
-        backgroundColor: const Color(0xFF14AF1B), // AppBar background color
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: const Color(0xFF14AF1B),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white), // Back button icon
-          onPressed: () {
-            Navigator.pop(context); // Go back to the previous page
-          },
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
         ),
       ),
-      body: WebView( // Remove the 'const' keyword
-        initialUrl: 'assets/map.html', // Load the Leaflet map
-        javascriptMode: JavascriptMode.unrestricted, // Enable JavaScript
-      ),
+      body: WebViewWidget(controller: controller),
     );
   }
 }
