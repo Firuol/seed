@@ -4,6 +4,17 @@ import '../widgets/home_widgets/bottom_navigation_bar.dart';
 import '../widgets/home_widgets/circular_bar_summary.dart';
 import '../widgets/home_widgets/toggle_tabs.dart';
 import '../widgets/home_widgets/quick_option_card.dart';
+import 'qr_scanner_screen.dart'; // Import the QR scanner screen
+
+import 'package:permission_handler/permission_handler.dart';
+
+Future<void> requestCameraPermission() async {
+  var status = await Permission.camera.status;
+  if (!status.isGranted) {
+    await Permission.camera.request();
+  }
+}
+
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -127,7 +138,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
                                           SizedBox(height: 20),
                                           ElevatedButton.icon(
-                                            onPressed: () {},
+                                            onPressed: () async {
+                                              final result = await Navigator.push(
+                                                context,
+                                                MaterialPageRoute(builder: (context) => QRScannerScreen()),
+                                              );
+
+                                              if (result != null) {
+                                                // Handle the scanned QR code result
+                                                print('Scanned QR Code: $result');
+                                                // You can update the state or show a dialog with the result
+                                              }
+                                            },
                                             icon: Icon(Icons.qr_code_scanner),
                                             label: Text('Scan QR Code'),
                                             style: ElevatedButton.styleFrom(
