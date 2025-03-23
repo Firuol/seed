@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart'; // Import the webview_flutter package
 
 class Locator extends StatelessWidget {
   const Locator({Key? key}) : super(key: key);
@@ -13,24 +14,17 @@ class Locator extends StatelessWidget {
             color: Colors.white, // Makes the text color white
           ),
         ), // Title of the AppBar
-        backgroundColor:
-          Color(0xFF14AF1B), // AppBar background color
+        backgroundColor: const Color(0xFF14AF1B), // AppBar background color
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back,
-              color: Colors.white), // Back button icon
+          icon: const Icon(Icons.arrow_back, color: Colors.white), // Back button icon
           onPressed: () {
             Navigator.pop(context); // Go back to the previous page
           },
         ),
       ),
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          Image.asset(
-            'assets/locationjimma.png',
-            fit: BoxFit.cover, // Ensures the image covers the entire screen
-          ),
-        ],
+      body: WebView( // Remove the 'const' keyword
+        initialUrl: 'assets/map.html', // Load the Leaflet map
+        javascriptMode: JavascriptMode.unrestricted, // Enable JavaScript
       ),
     );
   }

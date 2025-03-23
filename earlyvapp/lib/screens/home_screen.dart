@@ -15,7 +15,6 @@ Future<void> requestCameraPermission() async {
   }
 }
 
-
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();

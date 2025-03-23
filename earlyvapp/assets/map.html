@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    #map { height: 100vh; width: 100vw; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    // Replace with your location coordinates (latitude, longitude)
+    const myLocation = [7.6543, 36.8203]; // Example: Jimma, Ethiopia
+    const map = L.map('map').setView(myLocation, 13);
+
+    // Add a tile layer (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add a marker for your location
+    L.marker(myLocation).addTo(map)
+      .bindPopup('Your Location')
+      .openPopup();
+
+    // Add a circle with a 3km radius
+    L.circle(myLocation, {
+      radius: 3000, // 3km radius
+      color: 'green',
+      fillColor: '#14AF1B',
+      fillOpacity: 0.2
+    }).addTo(map);
+  </script>
+</body>
+</html>
