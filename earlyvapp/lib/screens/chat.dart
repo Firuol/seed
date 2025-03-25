@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ChatWithDoctor extends StatelessWidget {
-  final String doctorName; // Doctor's name passed from the previous page
+  final String doctorName; // Vet's name passed from the previous page
 
   const ChatWithDoctor({Key? key, required this.doctorName}) : super(key: key);
 
@@ -10,10 +10,30 @@ class ChatWithDoctor extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          '$doctorName Mariisisuuf',
+          'Chat with $doctorName',
           style: const TextStyle(color: Colors.white),
         ),
         backgroundColor: Color(0xFF14AF1B),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.call, color: Colors.white),
+            onPressed: () {
+              // Call functionality (placeholder)
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text("Calling...")),
+              );
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.video_call, color: Colors.white),
+            onPressed: () {
+              // Video call functionality (placeholder)
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text("Starting video call...")),
+              );
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -22,22 +42,22 @@ class ChatWithDoctor extends StatelessWidget {
             child: ListView(
               padding: const EdgeInsets.all(10),
               children: [
-                // Doctor's message
+                // Vet's message
                 const ChatBubble(
                     sender: "Dr. Caalaa Bayisa",
-                    message: "Nagaadha! Maal isin gargaru?"),
+                    message: "Hello! How can I assist your calf?"),
                 // User's message
                 const ChatBubble(
-                    sender: "Si",
-                    message: "Naguma doktor, Jabbii tokko na jalaa dhukkuba."),
-                // Doctor's message
+                    sender: "You",
+                    message: "Hi, doctor. My calf is not feeling well."),
+                // Vet's message
                 const ChatBubble(
                     sender: "Dr. Caalaa Bayisa",
-                    message: "Mallatolee akkami agarsisti?"),
+                    message: "What symptoms is your calf showing?"),
                 // User's message
                 const ChatBubble(
-                    sender: "Si",
-                    message: "hin gadditi, nyaatalle homaa hin nyatu"),
+                    sender: "You",
+                    message: "It seems very weak and has lost its appetite."),
                 // User sending a photo
                 Container(
                   margin: const EdgeInsets.symmetric(vertical: 5),
@@ -46,7 +66,7 @@ class ChatWithDoctor extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       const Text(
-                        "si",
+                        "You",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 12),
                       ),
@@ -54,7 +74,7 @@ class ChatWithDoctor extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: Image.asset(
-                          'assets/sick.jpg', // Replace with your photo path
+                          'assets/sick.jpg', // Replace with your calf's photo path
                           width: 200,
                           height: 200,
                           fit: BoxFit.cover,
@@ -74,7 +94,7 @@ class ChatWithDoctor extends StatelessWidget {
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'Ergaa Barreessu...',
+                      hintText: 'Type a message...',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -87,7 +107,7 @@ class ChatWithDoctor extends StatelessWidget {
                     // File upload logic (placeholder)
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
-                        content: Text("yeroo dhihootti!"),
+                        content: Text("Coming soon!"),
                       ),
                     );
                   },
@@ -98,7 +118,7 @@ class ChatWithDoctor extends StatelessWidget {
                     // Message send logic (placeholder)
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
-                        content: Text("Milkainan Ergameera!"),
+                        content: Text("Message sent successfully!"),
                       ),
                     );
                   },
@@ -126,7 +146,7 @@ class ChatBubble extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 5),
       child: Column(
         crossAxisAlignment:
-            sender == "Si" ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+            sender == "You" ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
           Text(
             sender,
@@ -136,7 +156,7 @@ class ChatBubble extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             margin: const EdgeInsets.only(top: 5),
             decoration: BoxDecoration(
-              color: sender == "Si" ? Colors.green[100] : Colors.grey[300],
+              color: sender == "You" ? Colors.green[100] : Colors.grey[300],
               borderRadius: BorderRadius.circular(10),
             ),
             child: Text(message),
