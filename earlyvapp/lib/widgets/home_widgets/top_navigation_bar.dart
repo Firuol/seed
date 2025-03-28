@@ -11,7 +11,7 @@ class TopNavigationBar extends StatelessWidget {
       child: Container(
         height: screenHeight * 0.1, // Responsive height
         decoration: BoxDecoration(
-          color: Color(0xFF14AF1B),
+          color: Color.fromARGB(255, 12, 83, 17),
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(20),
             bottomRight: Radius.circular(20),

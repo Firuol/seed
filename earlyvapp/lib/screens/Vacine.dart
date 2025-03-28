@@ -4,22 +4,22 @@ class Vacine extends StatelessWidget {
   // Static vaccination schedule data
   final List<Map<String, String>> vaccinationSchedules = [
     {
-      'Station': 'Waajira Qonnaa Magaala jimmaa',
+      'Station': 'Waajira Qonnaa Magaala jimmaa Clinic',
       'Date': '2017-05-10',
       'Location': 'Jimma, Ethiopia',
     },
     {
-      'Station': 'Kilinika Qarsaa',
+      'Station': 'Kilinika Qarsaa Clinic',
       'Date': '2017-06-15',
       'Location': 'Kersa, Ethiopia',
     },
     {
-      'Station': 'Waajira Qonnaa Agaaroo',
+      'Station': 'Waajira Qonnaa Agaaroo Clinic',
       'Date': '2017-07-20',
       'Location': 'Agaro, Ethiopia',
     },
     {
-      'Station': 'Qoranno Qonna Sokoru',
+      'Station': 'Qoranno Qonna Sokoru Clinic',
       'Date': '2017-07-25',
       'Location': 'Sokoru, Ethiopia',
     },
@@ -33,7 +33,7 @@ class Vacine extends StatelessWidget {
           'Vaccination Schedule',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Color(0xFF14AF1B),
+        backgroundColor:Color.fromARGB(255, 12, 83, 17),
       ),
       body: ListView.builder(
         itemCount: vaccinationSchedules.length,

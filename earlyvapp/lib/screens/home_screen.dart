@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               CircularBarSummary(
-                                  healthyCount: 20,
+                                  healthyCount: 98,
                                   atRiskCount: 3,
                                   criticalCount: 1),
                               SizedBox(height: 10),

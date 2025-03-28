@@ -17,7 +17,7 @@ class SignupScreen extends StatelessWidget {
                 width: double.infinity,
                 height: 280, // Increased height to fit logo
                 decoration: BoxDecoration(
-                  color: Color(0xFF14AF1B), // Green color
+                  color: Color.fromARGB(255, 12, 83, 17), // Green color
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -110,7 +110,7 @@ class SignupScreen extends StatelessWidget {
                       ),
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 80, vertical: 10),
-                        backgroundColor: Color(0xFF14AF1B),
+                        backgroundColor: Color.fromARGB(255, 12, 83, 17),
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
@@ -138,7 +138,7 @@ class SignupScreen extends StatelessWidget {
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
-        borderSide: BorderSide(color: Colors.green, width: 2),
+        borderSide: BorderSide(color:Color.fromARGB(255, 12, 83, 17), width: 2),
       ),
       contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 14),
     );

@@ -10,7 +10,7 @@ class ProfileScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Color(0xFF14AF1B)),
+          icon: Icon(Icons.arrow_back, color:Color.fromARGB(255, 12, 83, 17)),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -35,7 +35,7 @@ class ProfileScreen extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Color(0xFF14AF1B),
+                        color: Color.fromARGB(255, 12, 83, 17),
                       ),
                       child: IconButton(
                         icon: Icon(Icons.edit, color: Colors.white, size: 18),
@@ -57,7 +57,7 @@ class ProfileScreen extends StatelessWidget {
               SizedBox(height: 30),
 
               // Edit Profile Button
-              _buildButton(context, Icons.edit, "Edit Profile", Color(0xFF14AF1B), () {
+              _buildButton(context, Icons.edit, "Edit Profile", Color.fromARGB(255, 12, 83, 17), () {
                 // Navigate to edit profile screen
               }),
             ],
@@ -86,7 +86,7 @@ class ProfileScreen extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Icon(icon, color: Color(0xFF14AF1B), size: 28),
+          Icon(icon, color: Color.fromARGB(255, 12, 83, 17), size: 28),
           SizedBox(width: 12),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

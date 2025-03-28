@@ -26,15 +26,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Scaffold(
       body: _pages[_pageIndex],
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Color(0xFF14AF1B),
+        backgroundColor: Color.fromARGB(255, 12, 83, 17),
         color: Colors.white, // Navbar color
         height: 60, // Navbar height
         items: <Widget>[
-          Icon(Icons.home, size: 30, color: Color(0xFF14AF1B)), // Home
-          Icon(Icons.list, size: 30, color: Color(0xFF14AF1B)), // Cattle (Farm Animals)
-          Icon(Icons.location_on, size: 30, color: Color(0xFF14AF1B)), // Locator
-          Icon(Icons.local_hospital, size: 30, color: Color(0xFF14AF1B)), // Telemed
-          Icon(Icons.vaccines, size: 30, color: Color(0xFF14AF1B)), // Vaccine
+          Icon(Icons.home, size: 30, color: Color.fromARGB(255, 12, 83, 17)), // Home
+          Icon(Icons.list, size: 30, color: Color.fromARGB(255, 12, 83, 17)), // Cattle (Farm Animals)
+          Icon(Icons.location_on, size: 30, color: Color.fromARGB(255, 12, 83, 17)), // Locator
+          Icon(Icons.local_hospital, size: 30, color: Color.fromARGB(255, 12, 83, 17)), // Telemed
+          Icon(Icons.vaccines, size: 30, color: Color.fromARGB(255, 12, 83, 17)), // Vaccine
         ],
         animationDuration: Duration(milliseconds: 300), // Smooth animation
         index: _pageIndex, // Keep track of the selected index

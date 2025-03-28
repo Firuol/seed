@@ -21,7 +21,7 @@ class GetStartedPage extends StatelessWidget {
                   height: 300,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFF14AF1B), // Green background for the circle
+                    color:Color.fromARGB(255, 12, 83, 17), // Green background for the circle
                   ),
                 ),
                 // Farmer image (slightly larger than the circle and positioned above)
@@ -61,7 +61,7 @@ Text(
               ),
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 80, vertical: 10),
-                backgroundColor: Color(0xFF14AF1B), // Button color using #14AF1B
+                backgroundColor: Color.fromARGB(255, 12, 83, 17), // Button color using #14AF1B
                 foregroundColor: Colors.white, // Text color
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),

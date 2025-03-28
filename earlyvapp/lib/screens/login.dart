@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
                 width: double.infinity,
                 height: 280,
                 decoration: BoxDecoration(
-                  color: Color(0xFF14AF1B),
+                  color: Color.fromARGB(255, 12, 83, 17),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -92,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 80, vertical: 10),
-                        backgroundColor: Color(0xFF14AF1B),
+                        backgroundColor: Color.fromARGB(255, 12, 83, 17),
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
