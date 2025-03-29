@@ -8,7 +8,7 @@ Here are some screenshots of the project:
 
 ### Screenshot 1
 
-![Home page screen](home.png)
+![Home page screen](/asset/home.png)
 
 ### Screenshot 2
 
