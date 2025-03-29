@@ -8,15 +8,15 @@ Here are some screenshots of the project:
 
 ### Screenshot 1
 
-![Home page screen](/seed/home.png)
+![Home page screen](home.png)
 
 ### Screenshot 2
 
-![Onboarding page](.seed/onboarding.png)
+![Onboarding page](onboarding.png)
 
 ### Screenshot 3
 
-![registration page](seed/register3.png)
+![Registration page](register3.png)
 
 ## Installation
 
