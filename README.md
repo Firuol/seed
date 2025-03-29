@@ -8,7 +8,7 @@ Here are some screenshots of the project:
 
 ### Screenshot 1
 
-![Home page screen](seed/home.png)
+![Home page screen](/seed/home.png)
 
 ### Screenshot 2
 
