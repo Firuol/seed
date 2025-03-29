@@ -12,11 +12,11 @@ Here are some screenshots of the project:
 
 ### Screenshot 2
 
-![Onboarding page](./onboarding.png)
+![Onboarding page](.onboarding.png)
 
 ### Screenshot 3
 
-![registration page](./register3.png)
+![registration page](register3.png)
 
 ## Installation
 
