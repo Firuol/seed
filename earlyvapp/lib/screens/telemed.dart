@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:earlyvapp/screens/chat.dart';
+import 'package:earlyvapp/screens/chatbot.dart';
+
 class Telemed extends StatelessWidget {
   // Static list of doctors with their online/offline status
   final List<Map<String, dynamic>> doctors = [
@@ -24,8 +26,14 @@ class Telemed extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Color(0xFF14AF1B),
+        backgroundColor: Color.fromARGB(255, 12, 83, 17),
         elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: ListView.builder(
         padding: EdgeInsets.all(16),
@@ -40,7 +48,7 @@ class Telemed extends StatelessWidget {
             ),
             child: ListTile(
               leading: CircleAvatar(
-                backgroundColor: doctor['isOnline'] ? Colors.green : Colors.grey,
+                backgroundColor: doctor['isOnline'] ? Color.fromARGB(255, 12, 83, 17) : Colors.grey,
                 child: const Icon(Icons.person, color: Colors.white),
               ),
               title: Text(
@@ -50,7 +58,7 @@ class Telemed extends StatelessWidget {
               subtitle: Text(
                 doctor['isOnline'] ? 'Online' : 'Offline',
                 style: TextStyle(
-                  color: doctor['isOnline'] ? Colors.green : Colors.grey,
+                  color: doctor['isOnline'] ? Color.fromARGB(255, 12, 83, 17) : Colors.grey,
                   fontSize: 14,
                 ),
               ),
@@ -74,20 +82,19 @@ class Telemed extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Show the AI Chatbot dialog
-          showDialog(
-            context: context,
-            builder: (context) => AIChatbotDialog(),
+          // Navigate to the chatbot page directly
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => AIChatbotScreen()),
           );
         },
         child: Icon(Icons.assistant, color: Colors.white),
-        backgroundColor: Color(0xFF14AF1B),
+        backgroundColor: Color.fromARGB(255, 12, 83, 17),
         elevation: 4,
       ),
     );
   }
 }
-
 
 class ChatBubble extends StatelessWidget {
   final String message;
@@ -103,7 +110,7 @@ class ChatBubble extends StatelessWidget {
         margin: EdgeInsets.symmetric(vertical: 4),
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         decoration: BoxDecoration(
-          color: isMe ? Color(0xFF14AF1B) : Colors.grey[200],
+          color: isMe ? Color.fromARGB(255, 12, 83, 17) : Colors.grey[200],
           borderRadius: BorderRadius.circular(16),
         ),
         child: Text(
@@ -111,69 +118,6 @@ class ChatBubble extends StatelessWidget {
           style: TextStyle(
             color: isMe ? Colors.white : Colors.black,
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class AIChatbotDialog extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Dialog(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Container(
-        width: MediaQuery.of(context).size.width * 0.8,
-        padding: EdgeInsets.all(16),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            CircleAvatar(
-              radius: 30,
-              backgroundColor: Color(0xFF14AF1B),
-              child: Icon(Icons.assistant, color: Colors.white, size: 30),
-            ),
-            SizedBox(height: 16),
-            Text(
-              "AI Assistant",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 8),
-            Text(
-              "How can I assist you today?",
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.grey[600],
-              ),
-            ),
-            SizedBox(height: 16),
-            TextField(
-              decoration: InputDecoration(
-                hintText: "Type your question...",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                // Handle AI assistant response
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF14AF1B),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                ),
-              ),
-              child: Text("Send"),
-            ),
-          ],
         ),
       ),
     );

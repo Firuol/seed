@@ -13,7 +13,7 @@ class ChatWithDoctor extends StatelessWidget {
           'Chat with $doctorName',
           style: const TextStyle(color: Colors.white),
         ),
-        backgroundColor: Color(0xFF14AF1B),
+        backgroundColor: Color.fromARGB(255, 12, 83, 17),
         actions: [
           IconButton(
             icon: const Icon(Icons.call, color: Colors.white),
@@ -102,7 +102,7 @@ class ChatWithDoctor extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.attach_file, color: Colors.green),
+                  icon: const Icon(Icons.attach_file, color: Color.fromARGB(255, 12, 83, 17)),
                   onPressed: () {
                     // File upload logic (placeholder)
                     ScaffoldMessenger.of(context).showSnackBar(
@@ -113,7 +113,7 @@ class ChatWithDoctor extends StatelessWidget {
                   },
                 ),
                 IconButton(
-                  icon: const Icon(Icons.send, color: Colors.green),
+                  icon: const Icon(Icons.send, color: Color.fromARGB(255, 12, 83, 17)),
                   onPressed: () {
                     // Message send logic (placeholder)
                     ScaffoldMessenger.of(context).showSnackBar(

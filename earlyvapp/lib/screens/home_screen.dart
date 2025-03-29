@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text(
                               "Welcome Back Eshetu!",
                               style: TextStyle(
-                                  color: Color(0xFF14AF1B),
+                                  color: Color.fromARGB(255, 12, 83, 17),
                                   fontSize: 20),
                             ),
                           ],
@@ -153,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             label: Text('Scan QR Code'),
                                             style: ElevatedButton.styleFrom(
                                               foregroundColor: Colors.white,
-                                              backgroundColor: Color(0xFF14AF1B),
+                                              backgroundColor: Color.fromARGB(255, 12, 83, 17),
                                               shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(10),
@@ -171,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ),
                                             style: ElevatedButton.styleFrom(
                                               foregroundColor: Colors.white,
-                                              backgroundColor: Color(0xFF14AF1B),
+                                              backgroundColor: Color.fromARGB(255, 12, 83, 17),
                                               padding: EdgeInsets.symmetric(
                                                   vertical: 15),
                                               shape: RoundedRectangleBorder(
@@ -199,7 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             iconPath: 'assets/location.png',
                                             label: 'Locator',
                                             backgroundColor:
-                                             Color(0xFF14AF1B),
+                                            Color.fromARGB(255, 12, 83, 17),
                                           ),
                                         ),
                                         GestureDetector(
@@ -211,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             iconPath: 'assets/herd.png',
                                             label: 'Herd Health',
                                             backgroundColor:
-                                             Color(0xFF14AF1B),
+                                             Color.fromARGB(255, 12, 83, 17),
                                           ),
                                         ),
                                         GestureDetector(
@@ -223,7 +223,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             iconPath: 'assets/vaccine.png',
                                             label: 'Medication',
                                             backgroundColor:
-                                                Color(0xFF14AF1B),
+                                                Color.fromARGB(255, 12, 83, 17),
                                           ),
                                         ),
                                         GestureDetector(
@@ -235,7 +235,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             iconPath: 'assets/phone.png',
                                             label: 'Telemedicine',
                                             backgroundColor:
-                                                Color(0xFF14AF1B),
+                                                Color.fromARGB(255, 12, 83, 17),
                                           ),
                                         ),
                                       ],

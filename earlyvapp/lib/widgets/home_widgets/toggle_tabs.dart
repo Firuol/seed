@@ -6,7 +6,7 @@ class ToggleTabs extends StatefulWidget {
   ToggleTabs({required this.onTabChanged});
 
   @override
-  _ToggleTabsState createState() => _ToggleTabsState();
+  _ToggleTabsState createState() => _ToggleTabsState(); 
 }
 
 class _ToggleTabsState extends State<ToggleTabs> {
@@ -25,7 +25,7 @@ class _ToggleTabsState extends State<ToggleTabs> {
       width: 400,
       height: 50,
       decoration: BoxDecoration(
-        color: Color(0xFF14AF1B),
+        color: Color.fromARGB(255, 12, 83, 17),
         borderRadius: BorderRadius.circular(15),
       ),
       child: Row(
@@ -55,7 +55,7 @@ class _ToggleTabsState extends State<ToggleTabs> {
         child: Text(
           text,
           style: TextStyle(
-            color: isActive ? Color(0xFF14AF1B) : Colors.white,
+            color: isActive ? Color.fromARGB(255, 12, 83, 17) : Colors.white,
             fontSize: 15,
             fontWeight: isActive ? FontWeight.w400 : FontWeight.bold,
           ),
