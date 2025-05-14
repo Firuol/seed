@@ -1,32 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
-import 'dart:io'; // Import to check platform
 
-class Locator extends StatefulWidget {
+class Locator extends StatelessWidget {
   const Locator({Key? key}) : super(key: key);
-
-  @override
-  _LocatorState createState() => _LocatorState();
-}
-
-class _LocatorState extends State<Locator> {
-  late WebViewController controller;
-
-  @override
-  void initState() {
-    super.initState();
-
-    // Initialize the WebViewController
-    controller = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.unrestricted);
-
-    // Load the local file for Mobile (Android & iOS)
-    if (!Platform.isAndroid && !Platform.isIOS) {
-      controller.loadRequest(Uri.parse("assets/map.html"));
-    } else {
-      controller.loadFlutterAsset("assets/map.html");
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +9,29 @@ class _LocatorState extends State<Locator> {
       appBar: AppBar(
         title: const Text(
           'Locator Page',
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: const Color(0xFF14AF1B),
+          style: TextStyle(
+            color: Colors.white, // Makes the text color white
+          ),
+        ), // Title of the AppBar
+        backgroundColor:
+            Color.fromARGB(255, 12, 83, 17), // AppBar background color
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.pop(context),
+          icon: const Icon(Icons.arrow_back,
+              color: Colors.white), // Back button icon
+          onPressed: () {
+            Navigator.pop(context); // Go back to the previous page
+          },
         ),
       ),
-      body: WebViewWidget(controller: controller),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(
+            'assets/locationjimma.png',
+            fit: BoxFit.cover, // Ensures the image covers the entire screen
+          ),
+        ],
+      ),
     );
   }
 }

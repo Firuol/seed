@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace  "com.example.earlyvapp"
+    namespace "com.example.earlyvapp"  // Replace with your actual package name
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
